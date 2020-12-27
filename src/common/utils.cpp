@@ -23,5 +23,11 @@ bool ReadFileToVec(const std::string& filePath, std::vector<std::string>& vec)
     return true;
 };
 
+const uint32_t accumulateVec(const std::vector<uint32_t>& vec)
+{
+    return std::accumulate(vec.begin(), vec.end(), 1, std::multiplies<int>());
+}
+
+
 } //namespace utils
 } //namespace code

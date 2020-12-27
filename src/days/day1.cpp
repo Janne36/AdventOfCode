@@ -73,11 +73,6 @@ std::vector<uint32_t> FindThreeValues(
     return {}; 
 };
 
-const uint32_t accumulateVec(const std::vector<uint32_t>& vec)
-{
-    return std::accumulate(vec.begin(), vec.end(), 1, std::multiplies<int>());
-}
-
 } // namespace
 
 void Run()
@@ -89,15 +84,15 @@ void Run()
     const std::vector<uint32_t> values1 = FindTwoValues(sumToFind, expenseReport);
     const std::vector<uint32_t> values2 = FindThreeValues(sumToFind, expenseReport);
     
-    const uint32_t solution1 = accumulateVec(values1);
-    const uint32_t solution2 = accumulateVec(values2);
+    const uint32_t solution1 = code::utils::accumulateVec(values1);
+    const uint32_t solution2 = code::utils::accumulateVec(values2);
 
     //code::utils::PrintVector<uint32_t>(values1);
     //code::utils::PrintVector<uint32_t>(values2);
 
     // TODO: Ut
-    std::cout << "Solution1: " << solution1 << "\n"; // correct: 793524
-    std::cout << "Solution2: " << solution2 << "\n"; // correct: 61515678
+    std::cout << "Part 1: " << solution1 << "\n"; // correct: 793524
+    std::cout << "Part 2: " << solution2 << "\n"; // correct: 61515678
 }
 
 } //namespace day1

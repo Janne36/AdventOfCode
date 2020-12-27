@@ -110,6 +110,7 @@ const uint32_t CheckPwDataPart2(const std::vector<PasswordData>& pwData)
 
 void Run() 
 {
+    std::cout << "Day2" << "\n";
     std::vector<std::string> dataStr;
     // FIXME: ../
     bool success = code::utils::ReadFileToVec("../inputs/inputDay2.txt", dataStr);
@@ -119,8 +120,8 @@ void Run()
     const uint32_t validPws1 = CheckPwDataPart1(pwData); // Correct: 572
     const uint32_t validPws2 = CheckPwDataPart2(pwData); // Correct: 306
 
-    std::cout << "Valid passwords part1:" << validPws1 << "\n";
-    std::cout << "Valid passwords part2:" << validPws2 << std::endl;
+    std::cout << "Part 1:" << validPws1 << "\n";
+    std::cout << "Part 2:" << validPws2 << std::endl;
 }
 
 } //namespace day2

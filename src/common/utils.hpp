@@ -11,6 +11,7 @@ namespace code {
 namespace utils {
 
 bool ReadFileToVec(const std::string& filePath, std::vector<std::string>& vec);
+const uint32_t accumulateVec(const std::vector<uint32_t>& vec);
 
 template <typename T>
 void PrintVector(const std::vector<T> vector) 
